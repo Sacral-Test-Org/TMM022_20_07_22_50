@@ -1,0 +1,26 @@
+<div>
+  <!-- Unit ID Field -->
+  <label for="unitId">Unit ID:</label>
+  <input type="text" id="unitId" (dblclick)="onUnitIdDoubleClick()" (click)="onUnitIdClick()" (blur)="onUnitIdBlur()" />
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- LOV for selecting Unit ID -->
+  <div *ngIf="showLov">
+    <label for="lov">Select Unit ID:</label>
+    <select id="lov" (change)="onLovChange($event)">
+      <option *ngFor="let unit of unitList" [value]="unit.id">{{ unit.name }}</option>
+    </select>
+  </div>
+
+  <!-- LOV for editing Unit ID -->
+  <div *ngIf="showEditLov">
+    <label for="editLov">Edit Unit ID:</label>
+    <select id="editLov" (change)="onEditLovChange($event)">
+      <option *ngFor="let unit of editUnitList" [value]="unit.id">{{ unit.name }}</option>
+    </select>
+  </div>
+</div>

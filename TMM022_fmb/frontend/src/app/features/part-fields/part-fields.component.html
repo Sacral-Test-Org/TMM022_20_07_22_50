@@ -1,0 +1,58 @@
+<div class="part-fields-container">
+  <div class="header">
+    <div class="date">{{ currentDate }}</div>
+    <div class="screen-name">Part Fields Screen</div>
+    <div class="mode">{{ mode }}</div>
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="unitId">Unit ID</label>
+      <input type="text" id="unitId" [(ngModel)]="unitId" name="unitId" required />
+    </div>
+    <div class="form-group">
+      <label for="unitName">Unit Name</label>
+      <input type="text" id="unitName" [(ngModel)]="unitName" name="unitName" required />
+    </div>
+    <div class="form-group">
+      <label for="groupId">Group ID</label>
+      <input type="text" id="groupId" [(ngModel)]="groupId" name="groupId" required />
+    </div>
+    <div class="form-group">
+      <label for="groupName">Group Name</label>
+      <input type="text" id="groupName" [(ngModel)]="groupName" name="groupName" required />
+    </div>
+    <div class="form-group">
+      <label for="lineId">Line ID</label>
+      <input type="text" id="lineId" [(ngModel)]="lineId" name="lineId" required />
+    </div>
+    <div class="form-group">
+      <label for="lineDesc">Line Description</label>
+      <input type="text" id="lineDesc" [(ngModel)]="lineDesc" name="lineDesc" required />
+    </div>
+    <div class="form-group">
+      <label for="partId">Part ID</label>
+      <input type="text" id="partId" [(ngModel)]="partId" name="partId" required />
+    </div>
+    <div class="form-group">
+      <label for="partNo">Part No</label>
+      <input type="text" id="partNo" [(ngModel)]="partNo" name="partNo" required />
+    </div>
+    <div class="form-group">
+      <label for="partDesc">Part Description</label>
+      <input type="text" id="partDesc" [(ngModel)]="partDesc" name="partDesc" (click)="onPartDescClick()" (dblclick)="onPartDescClick()" required />
+    </div>
+    <div class="form-group">
+      <label for="partStatus">Part Status</label>
+      <input type="text" id="partStatus" [(ngModel)]="partStatus" name="partStatus" required />
+    </div>
+    <div class="form-group">
+      <button type="button" id="saveButton" (click)="onSave()" [disabled]="!isSaveEnabled">Save</button>
+    </div>
+  </form>
+  <div class="hints">
+    <p>Press &lt;RETURN&gt; to run a new form or &lt;F6&gt; to run a new form and return back.</p>
+  </div>
+  <div class="error-messages" *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

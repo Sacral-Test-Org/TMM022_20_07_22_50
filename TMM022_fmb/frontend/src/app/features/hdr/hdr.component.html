@@ -1,0 +1,43 @@
+<div>
+  <form>
+    <div>
+      <label for="unitId">Unit ID:</label>
+      <input type="text" id="unitId" [(ngModel)]="unitId" name="unitId" required>
+    </div>
+    <div>
+      <label for="unitName">Unit Name:</label>
+      <input type="text" id="unitName" [(ngModel)]="unitName" name="unitName" required>
+    </div>
+    <div>
+      <label for="groupId">Group ID:</label>
+      <input type="text" id="groupId" [(ngModel)]="groupId" name="groupId" required>
+    </div>
+    <div>
+      <label for="groupName">Group Name:</label>
+      <input type="text" id="groupName" [(ngModel)]="groupName" name="groupName" required>
+    </div>
+    <div>
+      <label for="lineId">Line ID:</label>
+      <input type="text" id="lineId" [(ngModel)]="lineId" name="lineId" (dblclick)="onLineIdDblClick()" (click)="onLineIdClick()" required>
+    </div>
+    <div>
+      <label for="lineDesc">Line Description:</label>
+      <input type="text" id="lineDesc" [(ngModel)]="lineDesc" name="lineDesc" required>
+    </div>
+    <div>
+      <label for="partId">Part ID:</label>
+      <input type="text" id="partId" [(ngModel)]="partId" name="partId">
+    </div>
+    <div>
+      <label for="partNo">Part Number:</label>
+      <input type="text" id="partNo" [(ngModel)]="partNo" name="partNo" (dblclick)="onPartNoDblClick()" (click)="onPartNoClick()" required>
+    </div>
+    <div>
+      <label for="partDesc">Part Description:</label>
+      <input type="text" id="partDesc" [(ngModel)]="partDesc" name="partDesc">
+    </div>
+    <div>
+      <button type="button" id="saveButton" [disabled]="!isSaveEnabled" (click)="onSave()">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,69 @@
+/* SCSS for HDR block styling */
+
+/* General styling for the HDR block */
+.hdr-block {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styling for the line ID field */
+.line-id-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.line-id-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.line-id-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Styling for the part number field */
+.part-number-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.part-number-field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.part-number-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Styling for the save button */
+.save-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

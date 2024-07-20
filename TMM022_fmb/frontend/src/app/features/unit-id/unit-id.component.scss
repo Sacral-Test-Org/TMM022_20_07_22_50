@@ -1,0 +1,64 @@
+/* Styling for Unit ID component */
+
+/* General styling for the component */
+.unit-id-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Styling for the Unit ID field */
+.unit-id-field {
+  margin-bottom: 16px;
+}
+
+/* Styling for the List of Values (LOV) display */
+.lov-display {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+/* Styling for individual LOV items */
+.lov-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.lov-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styling for error messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* Styling for the Save button */
+.save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.save-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Styling for cleared fields */
+.cleared-field {
+  background-color: #f9f9f9;
+}

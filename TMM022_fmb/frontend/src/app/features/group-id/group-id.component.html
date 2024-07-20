@@ -1,0 +1,15 @@
+<div>
+  <!-- Group ID Field -->
+  <input type="text" id="groupId" (dblclick)="onGroupIdDoubleClick()" (click)="onGroupIdClick()" [(ngModel)]="groupId" placeholder="Enter Group ID" />
+
+  <!-- Line ID Field -->
+  <input type="text" id="lineId" [(ngModel)]="lineId" placeholder="Enter Line ID" />
+
+  <!-- Save Button -->
+  <button id="saveButton" [disabled]="!isSaveEnabled" (click)="onSave()">Save</button>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>
